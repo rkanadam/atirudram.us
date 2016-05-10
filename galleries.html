@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ati Rudra Maha Yajnam</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <!--[if IE 6]>
+    <link href="default_ie6.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <script type = "text/javascript">
+        $(function () {
+            var $iframe = window.parent.$("iframe");
+            window.parent.if = $iframe;
+            $iframe.attr ("height", ($("#iframe_content").innerHeight () + 25) + "px");
+            var parts = window.location.href.split ("#");
+            var e = $("#" + parts[1]).get (0);
+            if (e && e.scrollIntoView) {
+                e.scrollIntoView ();
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="iframe_content" style = "float:none;clear:both">
+    <p class = "boxTitle"><a name = "overview">Photo Galleries</a><p>
+    <ul>
+        <li><a href = "http://www.atirudram.com/Galleries/Pictures/Mahakumbhabhishekam/index.htm" target = "_blank">http://www.atirudram.com/Galleries/Pictures/Mahakumbhabhishekam/index.htm</a></li>
+        <li><a href = "http://www.sssbpt.org/Pages/reports/adirudram.htm">http://www.sssbpt.org/Pages/reports/adirudram.htm</a></li>
+    </ul>
+</div>
+</body>
+</html>

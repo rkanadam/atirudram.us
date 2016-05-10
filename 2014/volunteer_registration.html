@@ -1,0 +1,534 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><link rel="shortcut icon" href="http://www.srimcenter.org/main/skins/laila/img/masthead/Karunamayi-Amma-Meditation-.jpg" type="image/x-icon">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10; chrome=1;">
+<meta name="fragment" content="!">
+<base target="_blank">
+<title>Atirudra Maha Yajna - Volunteer Registration Form</title>
+
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src = "js/format.min.js" type="text/javascript"></script>
+
+
+<link href='https://docs.google.com/static/forms/client/css/3904611051-formview_ltr.css' type='text/css' rel='stylesheet'>
+<link href="http://fonts.googleapis.com/css?family=Parisienne|Bitter|Tangerine|Shanti" rel="stylesheet" type="text/css">
+<link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="http://s3.amazonaws.com/zyc_service_team/Aristo/Aristo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+
+<style type="text/css">
+
+body {
+  background: #FFFFFF url(images/bg01.png) repeat;
+  color: #1b2b67;
+  font-family: Shanti,Molengo,'Trebuchet MS',Tahoma,Verdana,Arial,sans-serif;
+  padding: 0;
+  font-size: 16px;
+  height: 1500px;
+}
+input, select, textarea {
+  font-family: Tahoma,Arial,serif;
+  font-size: 16px;
+}
+a {
+  color: #34798d;
+}
+div.ss-form-container {
+  background: #FFFFFF url(images/bg01.png) repeat;
+  border: 1px solid #1b2b67;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 20px;
+  width: 80%;
+}
+div.ss-form-heading {
+  margin: 0 0 20px;
+}
+h1, h2 {
+  font-family: 'Josefin Sans Std Light';
+  font-weight: normal;
+}
+h1.ss-form-title {
+  font-size: 4em;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Tangerine';
+}
+.ss-required-asterisk {
+  color: #bc3611;
+}
+div.errorbox-bad {
+  background: none;
+  border: none;
+  padding: 0;
+}
+div.errorheader, div.errorbox-bad .ss-form-entry {
+  background: none;
+  border: 2px solid #bc3611;
+  border-radius: 5px;
+  color: #bc3611;
+  padding: 5px;
+}
+div.ss-section-header, div.ss-page-break {
+  margin: 15px 0;
+  padding: 0;
+}
+h2.ss-section-title, h2.ss-page-title {
+  background: none;
+  border-bottom: 1px dashed #1b2b67;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 5px;
+  padding: 0 0 5px;
+}
+td.ss-scalenumbers, td.ss-scalerow, td.ss-gridnumbers, td.ss-gridrow, tr.ss-grid-row-odd, tr.ss-grid-row-even {
+  border-color: #1b2b67;
+}
+tr.ss-grid-row-odd {
+  background: #fbffef;
+}
+tr.ss-grid-row-even {
+  background: #fffbef;
+}
+label.ss-q-help {
+  color: #999;
+}
+td.ss-scalenumbers, td.ss-scalerow, td.ss-leftlabel, td.ss-rightlabel, label.ss-gridnumber, span.ss-powered-by, .ss-powered-by a:link, .ss-powered-by a:visited, span.ss-terms {
+  color: #28642e;
+}
+label {
+	font-size: 16px;
+}
+
+#time_slots label {
+	text-align: center;
+}
+</style>
+<script type="text/javascript">
+        /**
+ * @license
+ *! H5F
+ * https://github.com/ryanseddon/H5F/
+ * Copyright (c) Ryan Seddon | Licensed MIT
+ */
+
+(function(e,t){"function"==typeof define&&define.amd?define(t):e.H5F=t()})(this,function(){var e,t,a,i,n,r,s,l,u,o,c,d,v,f,p,m,h,g,b,y,w,C,N,A,E,$,k=document,x=k.createElement("input"),q=/^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,M=/[a-z][\-\.+a-z]*:\/\//i,L=/^(input|select|textarea)$/i;return r=function(e,t){var a=!e.nodeType||!1,i={validClass:"valid",invalidClass:"error",requiredClass:"required",placeholderClass:"placeholder"};if("object"==typeof t)for(var r in i)t[r]===void 0&&(t[r]=i[r]);if(n=t||i,a)for(var l=0,u=e.length;u>l;l++)s(e[l]);else s(e)},s=function(a){var i,n=a.elements,r=n.length,s=!!a.attributes.novalidate;if(b(a,"invalid",u,!0),b(a,"blur",u,!0),b(a,"input",u,!0),b(a,"keyup",u,!0),b(a,"focus",u,!0),b(a,"change",u,!0),b(a,"click",o,!0),b(a,"submit",function(i){e=!0,t||s||a.checkValidity()||w(i)},!1),!v())for(a.checkValidity=function(){return c(a)};r--;)i=!!n[r].attributes.required,"fieldset"!==n[r].nodeName.toLowerCase()&&l(n[r])},l=function(e){var t=e,a=g(t),n={type:t.getAttribute("type"),pattern:t.getAttribute("pattern"),placeholder:t.getAttribute("placeholder")},r=/^(email|url)$/i,s=/^(input|keyup)$/i,l=r.test(n.type)?n.type:n.pattern?n.pattern:!1,u=f(t,l),o=m(t,"step"),v=m(t,"min"),h=m(t,"max"),b=!(""===t.validationMessage||void 0===t.validationMessage);t.checkValidity=function(){return c.call(this,t)},t.setCustomValidity=function(e){d.call(t,e)},t.validity={valueMissing:a,patternMismatch:u,rangeUnderflow:v,rangeOverflow:h,stepMismatch:o,customError:b,valid:!(a||u||o||v||h||b)},n.placeholder&&!s.test(i)&&p(t)},u=function(e){var t=C(e)||e,a=/^(input|keyup|focusin|focus|change)$/i,r=/^(submit|image|button|reset)$/i,s=/^(checkbox|radio)$/i,o=!0;!L.test(t.nodeName)||r.test(t.type)||r.test(t.nodeName)||(i=e.type,v()||l(t),t.validity.valid&&(""!==t.value||s.test(t.type))||t.value!==t.getAttribute("placeholder")&&t.validity.valid?(A(t,[n.invalidClass,n.requiredClass]),N(t,n.validClass)):a.test(i)?t.validity.valueMissing&&A(t,[n.requiredClass,n.invalidClass,n.validClass]):t.validity.valueMissing?(A(t,[n.invalidClass,n.validClass]),N(t,n.requiredClass)):t.validity.valid||(A(t,[n.validClass,n.requiredClass]),N(t,n.invalidClass)),"input"===i&&o&&(y(t.form,"keyup",u,!0),o=!1))},c=function(t){var a,i,n,r,s=!1;if("form"===t.nodeName.toLowerCase()){a=t.elements;for(var l=0,o=a.length;o>l;l++)i=a[l],n=!!i.attributes.required,r=!!i.attributes.pattern,"fieldset"!==i.nodeName.toLowerCase()&&(n||r&&n)&&(u(i),i.validity.valid||s||(e&&i.focus(),s=!0));return!s}return u(t),t.validity.valid},d=function(e){var t=this;t.validationMessage=e},o=function(e){var a=C(e);a.attributes.formnovalidate&&"submit"===a.type&&(t=!0)},v=function(){return E(x,"validity")&&E(x,"checkValidity")},f=function(e,t){if("email"===t)return!q.test(e.value);if("url"===t)return!M.test(e.value);if(t){var i=e.getAttribute("placeholder"),n=e.value;return a=RegExp("^(?:"+t+")$"),n===i?!1:""===n?!1:!a.test(e.value)}return!1},p=function(e){var t={placeholder:e.getAttribute("placeholder")},a=/^(focus|focusin|submit)$/i,r=/^(input|textarea)$/i,s=/^password$/i,l=!!("placeholder"in x);l||!r.test(e.nodeName)||s.test(e.type)||(""!==e.value||a.test(i)?e.value===t.placeholder&&a.test(i)&&(e.value="",A(e,n.placeholderClass)):(e.value=t.placeholder,b(e.form,"submit",function(){i="submit",p(e)},!0),N(e,n.placeholderClass)))},m=function(e,t){var a=parseInt(e.getAttribute("min"),10)||0,i=parseInt(e.getAttribute("max"),10)||!1,n=parseInt(e.getAttribute("step"),10)||1,r=parseInt(e.value,10),s=(r-a)%n;return g(e)||isNaN(r)?"number"===e.getAttribute("type")?!0:!1:"step"===t?e.getAttribute("step")?0!==s:!1:"min"===t?e.getAttribute("min")?a>r:!1:"max"===t?e.getAttribute("max")?r>i:!1:void 0},h=function(e){var t=!!e.attributes.required;return t?g(e):!1},g=function(e){var t=e.getAttribute("placeholder"),a=/^(checkbox|radio)$/i,i=!!e.attributes.required;return!(!i||""!==e.value&&e.value!==t&&(!a.test(e.type)||$(e)))},b=function(e,t,a,i){E(window,"addEventListener")?e.addEventListener(t,a,i):E(window,"attachEvent")&&window.event!==void 0&&("blur"===t?t="focusout":"focus"===t&&(t="focusin"),e.attachEvent("on"+t,a))},y=function(e,t,a,i){E(window,"removeEventListener")?e.removeEventListener(t,a,i):E(window,"detachEvent")&&window.event!==void 0&&e.detachEvent("on"+t,a)},w=function(e){e=e||window.event,e.stopPropagation&&e.preventDefault?(e.stopPropagation(),e.preventDefault()):(e.cancelBubble=!0,e.returnValue=!1)},C=function(e){return e=e||window.event,e.target||e.srcElement},N=function(e,t){var a;e.className?(a=RegExp("(^|\\s)"+t+"(\\s|$)"),a.test(e.className)||(e.className+=" "+t)):e.className=t},A=function(e,t){var a,i,n="object"==typeof t?t.length:1,r=n;if(e.className)if(e.className===t)e.className="";else for(;n--;)a=RegExp("(^|\\s)"+(r>1?t[n]:t)+"(\\s|$)"),i=e.className.match(a),i&&3===i.length&&(e.className=e.className.replace(a,i[1]&&i[2]?" ":""))},E=function(e,t){var a=typeof e[t],i=RegExp("^function|object$","i");return!!(i.test(a)&&e[t]||"unknown"===a)},$=function(e){for(var t=document.getElementsByName(e.name),a=0;t.length>a;a++)if(t[a].checked)return!0;return!1},{setup:r}});
+
+      </script>
+
+<meta name="viewport" content="width=device-width">
+
+<link href='https://docs.google.com/static/forms/client/css/722395648-mobile_formview_ltr.css' type='text/css' rel='stylesheet' media='screen and (max-device-width: 600px)'>
+
+<script type = "text/javascript">
+	$(function () {
+		var $iframe = window.parent.$("iframe");
+		window.parent.if = $iframe;
+		$iframe.attr ("height", (3750) + "px");
+		var parts = window.location.href.split ("#");
+		var e = $("#" + parts[1]).get (0);
+		if (e && e.scrollIntoView) {
+			e.scrollIntoView ();
+		}
+	});
+</script>
+
+</head>
+
+<body dir="ltr" class="ss-base-body"><div itemscope itemtype="http://schema.org/CreativeWork/FormObject"><meta itemprop="name" content="Atirudra Maha Yajna - Volunteer Registration Form">
+<meta itemprop="description" content="Jai Karunamayi - This form is for registering yourself as a volunteer either on the day or before the day of the event. Please do contact atirudram.us@gmail.com if you have any questions.
+">
+
+<meta itemprop="url" content="https://docs.google.com/forms/d/1Q-IbPqKOMqHDf2T0GUCJc4z2DrmkDrE9qcHR_pIPHoQ/viewform">
+<meta itemprop="embedUrl" content="https://docs.google.com/forms/d/1Q-IbPqKOMqHDf2T0GUCJc4z2DrmkDrE9qcHR_pIPHoQ/viewform?embedded=true">
+<meta itemprop="faviconUrl" content="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_jfk2.png">
+
+
+
+<div class="ss-form-container"><div class="ss-top-of-page">
+
+
+<div class="ss-form-heading"><h1 class="ss-form-title" dir="ltr">Volunteer Registration Form</h1><br/>
+<div style="margin-bottom: 10px;font-size: 100%;padding: 1em;font-weight: bold; border: 1px solid #bc3611;border-radius: 5px;background: #bc3611;color: #fff">Please Note: Work is currently progressing in fully swing at the SRIM Center in Atlanta. If you can help please call Rakesh Patel (rakesh.patel@weather.com, 404-931-5130) or Ravindra Addepalli (emailaddepalli@gmail.com, 678-520-6010).</div>
+<strong style="font-size: 110%;text-decoration: underline"><div class="ss-required-asterisk">If you have registered as a ritwik please do not register as a volunteer as you would have a packed schedule for the day.</div></strong>
+<br />
+<div class="ss-form-desc ss-no-ignore-whitespace">Jai Karunamayi - This form is for registering yourself as a volunteer either on the day or before the day of the event. Please do contact <a href="mailto:atirudram.us@gmail.com">atirudram.us@gmail.com</a> if you have any questions.<br><br></div>
+
+<hr class="ss-email-break" style="display:none;">
+<div class="ss-required-asterisk">Questions marked with a (*) are required</div></div></div>
+<div class="ss-form"><form action="https://docs.google.com/forms/d/1Q-IbPqKOMqHDf2T0GUCJc4z2DrmkDrE9qcHR_pIPHoQ/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol style="padding-left: 0">
+<div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Volunteering - Before The Event</h2>
+<div class="ss-section-description ss-no-ignore-whitespace">You can assist in many activities either remotely or on site. If you can help onsite, before the event, please do indicate it in the questions that follow.</div>
+
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-select"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1894976327"><div class="ss-q-title">Can you help us onsite before the event ? <span class="ss-required-asterisk">*</span>
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr">Would you be available to help at the actual location of the event,  285 Julie Lane Forsyth, GA, 31029, before the commencement ? You can help us right away or 1 week before the program. Do indicate your availability in the comments following this question</div></label>
+<select name="entry.1894976327" id="entry_1894976327" aria-required="true" required=""><option value=""></option>
+<option value="Yes">Yes</option> <option value="No">No</option></select>
+<div class="required-message">This is a required question</div>
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_112995842"><div class="ss-q-title">How far ahead would you be able to volunteer at the site ?
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr">For example: 1 week, 2 weeks or right away</div></label>
+<textarea name="entry.112995842" rows="8" cols="0" class="ss-q-long" id="entry_112995842" dir="auto"></textarea>
+<div class="error-message"></div>
+<div class="required-message">This is a required question</div>
+
+</div></div></div> <div class="ss-form-question">
+<div dir="ltr" class="ss-item  ss-checkbox"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1354259025"><div class="ss-q-title">Area(s) of Interest <span class="ss-required-asterisk">*</span>
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr">Please indicate your area(s) of interest. We recommend that you volunteer in no more than 2 areas.</div></label>
+
+<ul class="ss-choices"><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Athirudra Maha Yajna Program" id="group_882226524_2" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Atirudra Maha Yajna Program</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Ritwik Coordination" id="group_882226524_3" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Ritwik Coordination</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Fundraising &amp; Advertisements" id="group_882226524_4" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Fundraising &amp; Advertisements</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Brochure &amp; Publications" id="group_882226524_6" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Brochure &amp; Publications</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Web Site Management" id="group_882226524_7" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Web Site Management</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Puja Coordination" id="group_882226524_8" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Puja Coordination</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Cultural Committee" id="group_882226524_9" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Cultural Committee</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Food Management" id="group_882226524_10" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Food Management</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Site Management" id="group_882226524_11" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Site Management</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Accommodation" id="group_882226524_12" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Accommodation</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Volunteer Organization" id="group_882226524_13" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Volunteer Organization</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Transportation / Parking" id="group_882226524_14" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Transportation / Parking</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Audio-Video-Broadcasting" id="group_882226524_15" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Audio-Video-Broadcasting</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Puja Materials" id="group_882226524_16" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Puja Materials</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Medical Help Coordination" id="group_882226524_17" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Medical Help Coordination</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="SRIM Center Renovation" id="group_882226524_18" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">SRIM Center Renovation</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.882226524" value="Media (Electronic &amp; Print )" id="group_882226524_19" class="ss-q-checkbox"></span>
+<span class="ss-choice-label">Media (Electronic &amp; Print )</span>
+</label></li></ul>
+<div class="error-message">Please select at least one option.</div>
+<div class="required-message">This is a required question</div>
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Volunteering - On The Days of The Event</h2>
+<div class="ss-section-description ss-no-ignore-whitespace"></div>
+
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_985137399"><div class="ss-q-title">Have you registered as a Ritwik ?
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+<ul class="ss-choices"><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.308187371" value="Yes" id="group_308187371_1" class="ss-q-radio" aria-label="Yes"></span>
+<span class="ss-choice-label">Yes</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.308187371" value="No" id="group_308187371_2" class="ss-q-radio" aria-label="No"></span>
+<span class="ss-choice-label">No</span>
+</label></li></ul>
+<div class="error-message"></div>
+<div class="required-message">This is a required question</div>
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-grid"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_431314005"><div class="ss-q-title">Choose the time slots when you will be able to volunteer. 
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr">The program schedule is being finalized and will be available on the website at <a href="http://www.google.com/url?q=http%3A%2F%2Fatirudram.us&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNFuuDOz1UGMbdOE9oA_2c5PZwRVow">http://atirudram.us</a></div></label>
+<table style = "width:100%" id = "time_slots" class="table table-striped">
+<tr>
+<td>&nbsp;</td><td>05:00 - 09:00 AM</td><td>08:00 - 12:00 PM</td><td>11:00 AM - 03:00 PM</td><td>02:00 - 06:00 PM</td><td>05:00 - 09:00 PM</td><td>07:00 - 11:00 PM</td></tr>
+<tr><td>Wednesday, 04/30/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_1" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_2" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_3" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_4" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_5" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 AM" id="group_779090793_6" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Thursday, 05/01/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_7" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_8" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_9" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_10" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_11" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_12" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Friday, 05/02/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_13" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_14" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_15" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_16" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_17" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_18" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Saturday, 05/03/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_19" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_20" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_21" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_22" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_23" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_24" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Sunday, 05/04/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_25" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_26" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_27" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_28" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_29" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_30" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Monday, 05/05/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_31" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_32" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_33" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_34" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_35" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_36" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Tuesday, 05/06/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_37" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_38" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_39" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_40" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_41" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_42" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Wednesday, 05/07/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_43" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_44" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_45" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_46" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_47" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_48" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Thursday, 05/08/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_49" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_50" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_51" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_52" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_53" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_54" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Friday, 05/09/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_55" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_56" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_57" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_58" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_59" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_60" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Saturday, 05/10/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_61" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_62" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_63" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_64" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_65" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_66" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Sunday, 05/11/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_67" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_68" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_69" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_70" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_71" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_72" class="ss-q-checkbox"></span>
+
+</label></td></tr><tr><td>Monday, 05/12/2014</td><td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 AM" id="group_779090793_73" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="08:00 - 12:00 PM" id="group_779090793_74" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="11:00 - 03:00 PM" id="group_779090793_75" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="02:00 - 06:00 PM" id="group_779090793_76" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="05:00 - 09:00 PM" id="group_779090793_77" class="ss-q-checkbox"></span>
+
+</label></td> <td><label><span class="ss-choice-item-control goog-inline-block"><input type="checkbox" name="entry.779090793" value="07:00 - 11:00 PM" id="group_779090793_78" class="ss-q-checkbox"></span>
+
+</label></td> </tr></table>
+
+<div>
+<div class="required-message">This is a required question</div></div>
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1270652075"><div class="ss-q-title">Area of Preference - On The Day of The Event
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr">While we will make sincere attempts to place you in your area of interest, we may not be able to accomodate you in the requested area and might need your help elsewhere. The exact assignment would be determined by the co-ordinator on the day of reporting.</div></label>
+
+<ul class="ss-choices"><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.16764264" value="Registration / Information Desk" id="group_16764264_1" class="ss-q-radio" aria-label="Registration / Information Desk"></span>
+<span class="ss-choice-label">Registration / Information Desk</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.16764264" value="Transportation / Parking" id="group_16764264_2" class="ss-q-radio" aria-label="Transportation / Parking"></span>
+<span class="ss-choice-label">Transportation / Parking</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.16764264" value="Ushering" id="group_16764264_3" class="ss-q-radio" aria-label="Ushering"></span>
+<span class="ss-choice-label">Ushering</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.16764264" value="Food Setup / Serving" id="group_16764264_4" class="ss-q-radio" aria-label="Food Setup / Serving"></span>
+<span class="ss-choice-label">Food Setup / Serving</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.16764264" value="Cleanup" id="group_16764264_5" class="ss-q-radio" aria-label="Cleanup"></span>
+<span class="ss-choice-label">Cleanup</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.16764264" value="Altar / Decoration" id="group_16764264_6" class="ss-q-radio" aria-label="Altar / Decoration"></span>
+<span class="ss-choice-label">Altar / Decoration</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.16764264" value="Homa (Sacrifcial Fire) setup" id="group_16764264_7" class="ss-q-radio" aria-label="Homa (Sacrifcial Fire) setup"></span>
+<span class="ss-choice-label">Homa (Sacrifcial Fire) setup</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.16764264" value="Any" id="group_16764264_8" class="ss-q-radio" aria-label="Any"></span>
+<span class="ss-choice-label">Any</span>
+</label></li></ul>
+<div class="error-message"></div>
+<div class="required-message">This is a required question</div>
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_143544281"><div class="ss-q-title">Do you have a van which can be used for transportation of materials, devotees, etc
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+<ul class="ss-choices"><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1491894564" value="Yes" id="group_1491894564_1" class="ss-q-radio" aria-label="Yes"></span>
+<span class="ss-choice-label">Yes</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1491894564" value="No" id="group_1491894564_2" class="ss-q-radio" aria-label="No"></span>
+<span class="ss-choice-label">No</span>
+</label></li></ul>
+<div class="error-message"></div>
+<div class="required-message">This is a required question</div>
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1257197442"><div class="ss-q-title">Are you a medical professional ?
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr">If you are and are volunteering on the day of the event, would you be available and willing to help ?</div></label>
+
+<ul class="ss-choices"><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1796245568" value="Yes" id="group_1796245568_1" class="ss-q-radio" aria-label="Yes"></span>
+<span class="ss-choice-label">Yes</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1796245568" value="No" id="group_1796245568_2" class="ss-q-radio" aria-label="No"></span>
+<span class="ss-choice-label">No</span>
+</label></li></ul>
+<div class="error-message"></div>
+<div class="required-message">This is a required question</div>
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1001965759"><div class="ss-q-title">If your answer to the previous question is YES, please enter your specialisation
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="text" name="entry.1001965759" value="" class="ss-q-short" id="entry_1001965759" dir="auto" title="">
+<div class="error-message"></div>
+<div class="required-message">This is a required question</div>
+
+</div></div></div> <div class="errorbox-good">
+<div dir="ltr" class="ss-item  ss-section-header"><div class="ss-form-entry"><h2 class="ss-section-title">Contact Information</h2>
+<div class="ss-section-description ss-no-ignore-whitespace"></div>
+
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1506960698"><div class="ss-q-title">Your Name <span class="ss-required-asterisk">*</span>
+<label for="itemView.getDomIdToLabel()" aria-label="(Required field)"></label>
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="text" name="entry.1506960698" value="" class="ss-q-short" id="entry_1506960698" dir="auto" aria-required="true" required="" title="">
+<div class="error-message"></div>
+<div class="required-message">This is a required question</div>
+
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_1178316435"><div class="ss-q-title">Your E-Mail Address <span class="ss-required-asterisk">*</span>
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<input type="text" name="entry.1178316435" value="" class="ss-q-short" id="entry_1178316435" dir="auto" title="">
+<div class="error-message"></div>
+<div class="required-message">This is a required question</div>
+
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-item-label" for="entry_91524989"><div class="ss-q-title">Phone Number
+</div>
+<div class="ss-q-help ss-secondary-text" dir="ltr">Any number where we may reach you. It would be preferable if you gave us your cell phone number so that we can reach on the day of the event too.</div></label>
+<input type="text" name="entry.91524989" value="" class="ss-q-short" id="entry_91524989" dir="auto" title="">
+<div class="error-message"></div>
+<div class="required-message">This is a required question</div>
+
+</div></div></div> <div class="ss-form-question errorbox-good">
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+
+<div class="required-message">This is a required question</div>
+</div></div></div>
+<input type="hidden" name="draftResponse" value="[]
+">
+<input type="hidden" name="pageHistory" value="0">
+
+
+<div class="ss-item ss-navigate">
+<center>
+	<input type="submit" name="submit" value="Submit" id="ss-submit">
+</center>
+</div></ol></form></div>
+
+<div id="docs-aria-speakable" class="docs-a11y-ariascreenreader-speakable docs-offscreen" aria-live="assertive" role="region" aria-atomic></div></div>
+
+<script type='text/javascript' src='https://docs.google.com/static/forms/client/js/1828536302-formviewer_prd.js'></script>
+<script type="text/javascript">H5F.setup(document.getElementById('ss-form'));_initFormViewer(
+          "[100,\x22#28642E\x22,[[[882226524,[[7,200,[\x221\x22]\n,\x22Please select at least one option.\x22]\n]\n]\n]\n]\n]\n");
+		  jQuery("[type=submit]").button ().addClass ("ui-state-focus");
+		  
+		  (function($) {
+			var $checkboxes = $("#time_slots").find (":checkbox");
+			var date = new Date (2014, 03, 29); //April 29 2014
+			var counter = 0;
+			for (var i = 0; i < 13; ++i) {
+				date.setDate (date.getDate () + 1);
+				for (var j = 0; j < 6; ++j) {
+					var $checkbox = $($checkboxes.get (counter++));
+					$checkbox.val ("0" + (date.getMonth () + 1)  + "/" + (date.getDate () < 10 ? "0" : "") + date.getDate () + "/2014, " + $checkbox.val ());
+				}
+			}
+		  })(jQuery);
+      </script></div></body></html>

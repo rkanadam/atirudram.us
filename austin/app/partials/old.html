@@ -1,0 +1,381 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../bootstrap-3.0.3/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../bootstrap-3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-combobox.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+
+    <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-combobox.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+-->
+    <div class="alert alert-info" id = "top_alert">If you have trouble or any questions please do contact your lead.</div>
+    <div style = "max-height: 300px;overflow: auto;">
+        <table id = "teamTable" class="table table-striped table-responsive table-bordered" title="Click a row to edit">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <ul class="nav nav-tabs" style="margin-top:2em">
+        <li class="active"><a href="#registration_information" data-toggle="tab">Registration Information</a></li>
+        <!--li><a href="#payment" data-toggle="tab">Payment</a></li-->
+        <li><a href="#accommodation_assignment" data-toggle="tab">Accommodation and Homa Kunda Assignment</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content" style="border:1px solid #ddd;border-top: none;padding: 1em">
+        <div class="tab-pane active" id="registration_information">
+            <form class="form-horizontal" role="form" method="PUT" id="ritwikForm" style="padding-top: 10px">
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">First Name</label>
+                    <div class="col-sm-6">
+                        <input name = "firstname" type="text" class="form-control" id="firstName" placeholder="First and Last Name of the devotee. E.g. Sekhar Boddupalli" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+                    <div class="col-sm-6">
+                        <input name = "lastname" type="text" class="form-control" id="lastName" placeholder="First and Last Name of the devotee. E.g. Sekhar Boddupalli" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="assignment" class="col-sm-2 control-label">Assignment Status</label>
+                    <div class="col-sm-6">
+                        <input  name = "assignment" type="text" class="form-control" id="assignment" placeholder="If this devotee is a ritwik or a chanter or a volunteer" readonly>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="help-block">If the status is Ritwik or Chanter, kindly do the daily sadhana AND weekend 11x Rudra Parayanam. If status is indicated as TBD you are a backup Ritwik or Chanter. Please do the sadhana requested of Ritwik / Chanter. For any questions,  follow up with Sekhar Boddupalli sboddupalli@gmail.com</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="depositreceived" class="col-sm-2 control-label">Deposit Received ?</label>
+                    <div class="col-sm-6">
+                        <input  name = "depositreceived" type="text" class="form-control" id="depositreceived" placeholder="If this devotee has paid the deposit" readonly>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="help-block">Ensure accuracy, and id Pending please advise on next steps to follow-up with sboddupalli@gmail.com</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="State" class="col-sm-2 control-label">State</label>
+                    <div class="col-sm-6">
+                        <input type="text" name = "state" class="form-control" id="State" placeholder="State the devotee belongs to" required>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="help-block">The state of the nation the devotee is presently residing in. E.g CA, Karnataka, East Europe</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="City" class="col-sm-2 control-label">City</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name = "city" class="combobox" id="City" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Gender" class="col-sm-2 control-label">Gender</label>
+                    <div class="col-sm-6">
+                        <select name = "gender" id="Gender" required>
+                            <option></option>
+                            <option>Female</option>
+                            <option>Male</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="emailaddress" class="col-sm-2 control-label">Email Address</label>
+                    <div class="col-sm-6">
+                        <input type="email" name = "emailaddress" class="form-control" id="emailaddress" placeholder="sboddupalli@gmail.com" required>
+                    </div>
+                    <div class="col-sm-4">
+                        Please enter the exact email address where you would like to recevie all further communication. If this were to change please do intimate your lead immediately.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Phone Number" class="col-sm-2 control-label">Phone Number</label>
+                    <div class="col-sm-6">
+                        <input type="tel" name = "phonenumber" class="form-control" id="Phone Number" placeholder="Please enter it in the 1-408-702-2043 format" required>
+                    </div>
+                    <div class="col-sm-4">
+                        Please enter the exact phone number where you would like to recevie all further communication. If this were to change please do intimate your lead immediately.
+                    </div>
+                </div>
+                <!--  
+                <div class="form-group">
+                    <label for="Date Of Birth" class="col-sm-2 control-label">Date Of Birth</label>
+                    <div class="col-sm-6">
+                        <input type="text" name= "dateofbirth" class="form-control" id="Date Of Birth" placeholder="Please enter it in the MM/DD/YYYY format. E.g. 11/23/1926" required>
+                    </div>
+                    <div class="col-sm-4">
+                        Please note that your year of birth will be your password.
+                    </div>
+                </div>
+                -->
+                <div class="form-group">
+                    <label for="Chanting Experience" class="col-sm-2 control-label">Chanting Experience</label>
+                    <div class="col-sm-6">
+                        <select id="Chanting Experience" name = "experienceinchantingrudram" required>
+                            <option></option>
+                            <option>1 - 2 years</option>
+                            <option>2 - 4 years</option>
+                            <option>5 years and beyond</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Spouse registered as Ritwik?" class="col-sm-2 control-label">Is your spouse registered ?</label>
+                    <div class="col-sm-6">
+                        <select id="Spouse registered as Ritwik?" name="spouseregisteredasritwik">
+                            <option></option>
+                            <option>No</option>
+                            <option>Yes</option>
+                            <option>N/A</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+	                    If yes, spouse should already be in registry and deposit paid for. <span class="label label-danger">If NO, PLEASE DO NOT ADD THEM NOW.</span> If you would like to add please contact Sekhar Boddupalli sboddupalli@gmail.com 
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmed13-days" class="col-sm-2 control-label">Confirmed to come all 13 days to Badrinath ?</label>
+                    <div class="col-sm-6">
+                        <select id="confirmed13-days" name="confirmed13-days">
+                            <option></option>
+                            <option>Not Coming</option>
+                            <option>Yes</option>
+                            <option>??</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                    	If this is indicated as ?? please confirm your participation and discuss change the status accordingly.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Spouse  Name" class="col-sm-2 control-label">Spouse Name</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="Spouse Name" name="spousename" placeholder="For e.g. Hyma">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Medical / Dietery restrictions. If any." class="col-sm-2 control-label">Medical / Dietery Restrictions</label>
+                    <div class="col-sm-6">
+                        <textarea name="medicaldieteryrestrictions.ifany." id="Medical / Dietery restrictions. If any." class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend>Other Adults Accompanying You</legend>
+                    <div class="form-group">
+                        <label for="Total Other Adults Coming" class="col-sm-2 control-label">Total Other Adults Coming</label>
+                        <div class="col-sm-6">
+                            <input type="number" name = "totalotheradultscoming" class="form-control" id="Total Other Adults Coming" placeholder="For e.g. 1" required>
+                        </div>
+                        <div class="col-sm-4">
+Please enter other additional adults (above age 15), family, and friends you have registered already. Their names should already be in the registry and deposit paid for. Please do not include your spouse or yourself in this count. <span class="label label-danger">PLEASE DO NOT ENTER NEW REGISTRANTS.</span> If you would like to add please contact Sekhar Boddupalli sboddupalli@gmail.com</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 1 Name" class="col-sm-2 control-label">Other Adult 1 Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" name = "otheradult1name" class="form-control" id="Other Adult 1 Name" placeholder="Sekhar Boddupalli">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 2 Name" class="col-sm-2 control-label">Other Adult 2 Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" name = "otheradult2name" class="form-control" id="Other Adult 2 Name" placeholder="Sekhar Boddupalli">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 3 Name" class="col-sm-2 control-label">Other Adult 3 Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" name = "otheradult3name" class="form-control" id="Other Adult 3 Name" placeholder="Sekhar Boddupalli">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Children Accompanying You</legend>
+                    <div class="form-group">
+                        <label for="No of Children attending" class="col-sm-2 control-label">No of Children attending</label>
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control" id="No of Children attending" placeholder="For e.g. 1" name="noofchildrenattending">
+                        </div>
+                        <div class="col-sm-4">
+                            Please enter children (age bracket 8 to 18) that are accompanying you. Their names should already be in the registry and deposit paid for.<span class="label label-danger">PLEASE DO NOT ENTER NEW REGISTRANTS.</span> If you would like to add please contact Sekhar Boddupalli sboddupalli@gmail.com
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Children 1 Name" class="col-sm-2 control-label">Name of Child 1</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Children 1 Name" name="children1name" placeholder="Sai Boddupalli">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Child 2 Name" class="col-sm-2 control-label">Name of Child 2</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Children 2 Name" name="children2name" placeholder="Sai Boddupalli">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Child 3 Name" class="col-sm-2 control-label">Name of Child 3</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Children 3 Name" name="children3name" placeholder="Sai Bodduppali">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Travel</legend>
+                    <div class="form-group">
+                        <label for="rishikeshtransportationneeded" class="col-sm-2 control-label">Do you need
+                             transportation from Rishikesh ?</label>
+
+                        <div class="col-sm-6">
+                            <select name="rishikeshtransportationneeded" id="rishikeshtransportationneeded"
+                                    required>
+                                <option></option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                        	<span class="label label-success">If YES</span>, Please note that you will need to be in Rishikesh preferably by 3 PM on June 22 or by latest 7 PM. 
+                        	Group prayers and Ganga Arati are organized on the evening of June 22. We are also organizing group stay in Rishikesh on June 22 night. 
+                        	Group will travel together on June 23 from Rishikesh to Badrinath. 
+                        	<span class="label label-danger">If NO</span>, you have to arrive in Badrinath by no later than June 23rd evening. 
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Accommodation</legend>
+                    <div class="form-group">
+                        <label for="preferredroomcategory" class="col-sm-2 control-label">Preferred Room Category</label>
+
+                        <div class="col-sm-6">
+                            <select name="preferredroomcategory" id="preferredroomcategory"
+                                    required>
+                                <option></option>
+                                <option value = "800">800-1000 INR</option>
+                                <option value = "2500">2500-4000 INR</option>
+                                <option value = "6000">6000+ INR</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+							Please note the numbers are in Indian Rupees per room per day. We anticipate accommodating 3 to 4 individuals or family size per room. We will make a best attempt to provide the requested category, but cannot guarantee. You will receive confirmation in 3 to 4 weeks.                        
+						</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="preferredroompartner" class="col-sm-2 control-label">Preferred Room Partner</label>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="preferredroompartner" id="preferredroompartner"
+                                   class="form-control" placeholder="Swami">
+                        </div>
+                        <div class="col-sm-4">
+ 							If you are coming as single individual and prefer to share room with any particular individual(s) please indicate their names here. Families will be accommodated together. We will do our best to organize accommodation per your request.                        
+ 						</div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>&nbsp;</legend>
+                </fieldset>
+                <div class="form-group">
+                    <label for="Notes/Questions/Issues" class="col-sm-2 control-label">Notes / Questions / Issues</label>
+                    <div class="col-sm-6">
+                        <textarea id="Notes/Questions/Issues" class="form-control" rows="5" name="notesquestionsissues"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane" id="payment" style="display:none">
+            <div class="alert alert-warning">If you have made any changes to the registration please do save them first.
+                If you have already paid, please do give us a couple of days before this is reflected in your account.
+                Please note these selections are final, if you would like these to be changed after the initial payment is made please contact your lead.
+            </div>
+            <table id = "accommodation_options" class="table table-striped table-bordered">
+                <thead>
+                    <th>Name</th>
+                    <th>Accommodation Option</th>
+                    <th>Age</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="panel panel-default" style="margin-top: 5em">
+                <div class="panel-body">
+                    <div style="text-align: center">
+                        <button class="btn btn-lg btn-primary" name="accommodationPaymentButton"
+                                id="accommodationPaymentButton">Pay Now (via PayPal)
+                        </button>
+                    </div>
+                </div>
+                <h3 style="text-align: center">OR</h3>
+
+                <ol class="list-group">
+                    <li class="list-group-item">Make a <span class="label label-info" style="font-size: 100%">Cashier's Cheque</span> to <span class="label label-info" style="font-size: 100%">SRIM Center</span></li>
+                    <li class="list-group-item">In the memo please do write clearly the persons you are paying for and the selected accommodations.</li>
+                    <li class="list-group-item">Mail the cashier's cheque to <span class="label label-info" style="font-size: 100%">Raghuram Kanadam, 167 Acalanes Dr, APT 1, Sunnyvale, CA, 94086</span></li>
+                </ol>
+            </div>
+            <form id="accommodationPaypalForm" action="https://www.paypal.com/us/cgi-bin/webscr" method="post" style="display: none;" target = "_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="atirudramahayajna.owner@gmail.com">
+                <input type="hidden" name="item_name" value="Payment for accommodation.">
+                <input type="hidden" name="page_style" value="PayPal">
+                <input type="hidden" name="no_shipping" value="1">
+                <input type="hidden" name="return" value="http://atirudram.us">
+                <input type="hidden" name="cancel_return" value="http://atirudram.us">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="amount" value="0">
+                <input type="hidden" name="tax" value="0">
+                <input type="hidden" name="lc" value="US">
+                <input type="hidden" name="bn" value="PP-DonationsBF">
+            </form>
+        </div>
+
+        <div class="tab-pane" id="accommodation_assignment">
+			<form class="form-horizontal" role="form" method="PUT" id="ritwikForm" style="padding-top: 10px">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Hotel Name</label>
+                    <label class="col-sm-3 control-label" id = "hotelName"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Hotel Address</label>
+                    <label class="col-sm-3 control-label" id = "hotelAddress"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Hotel Phone Number</label>
+                    <label class="col-sm-3 control-label" id = "hotelPhoneNumber"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Hotel Room Rate</label>
+                    <label class="col-sm-3 control-label" id = "hotelRoomRate"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Yajna Kunda (Sacrificial Altar) Name</label>
+                    <label class="col-sm-3 control-label" id = "homaKundaName"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Yajna Kunda (Sacrificial Altar) Number</label>
+                    <label class="col-sm-3 control-label" id = "homaKundaNumber"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Seating Number / Spot</label>
+                    <label class="col-sm-3 control-label" id = "homaKundaSpot"></label>
+                </div>
+			</form>
+		</div>
+    </div>
+

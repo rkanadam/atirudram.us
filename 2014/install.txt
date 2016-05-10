@@ -1,0 +1,1 @@
+s3cmd sync --exclude "*jade_gold*" --exclude ".s3*" --exclude "*.svn*" --exclude "*.idea*" --exclude ".DS_Store" atirudram.us/ s3://atirudram.us

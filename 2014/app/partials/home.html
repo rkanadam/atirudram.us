@@ -1,0 +1,618 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../bootstrap-3.0.3/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../bootstrap-3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-combobox.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+
+    <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-combobox.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+-->
+    <div class="alert alert-info" id = "top_alert">If you have trouble or any questions please do contact your lead.</div>
+    <div style = "max-height: 300px;overflow: auto;">
+        <table id = "teamTable" class="table table-striped table-responsive table-bordered" title="Click a row to edit">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <ul class="nav nav-tabs" style="margin-top:2em">
+        <li class="active"><a href="#registration_information" data-toggle="tab">Registration Information</a></li>
+        <!--li><a href="#payment" data-toggle="tab">Payment</a></li-->
+        <li><a href="#accommodation_assignment" data-toggle="tab">Accommodation and Homa Kunda Assignment</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content" style="border:1px solid #ddd;border-top: none;padding: 1em">
+        <div class="tab-pane active" id="registration_information">
+            <form class="form-horizontal" role="form" method="PUT" id="ritwikForm" style="padding-top: 10px">
+                <div class="form-group">
+                    <label for="Name" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-6">
+                        <input name = "name" type="text" class="form-control" id="Name" placeholder="First and Last Name of the devotee. E.g. Sekhar Boddupalli" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Ritwik Rank" class="col-sm-2 control-label">Ritwik Status</label>
+                    <div class="col-sm-6">
+                        <input  name = "ritwikrank" type="text" class="form-control" id="Ritwik Rank" placeholder="If this devotee is a ritwik or a chanter" readonly>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="help-block">This devotee could be a chanter or a ritwik. If you would like this status to be changed please contact pavan.jella@gmail.com or sboddupalli@gmail.com</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="State" class="col-sm-2 control-label">State</label>
+                    <div class="col-sm-6">
+                        <input type="text" name = "state" class="form-control" id="State" placeholder="State the devotee belongs to" required>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="help-block">The state of the nation the devotee is presently residing in. E.g CA, Karnataka, East Europe</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="City" class="col-sm-2 control-label">City</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name = "city" class="combobox" id="City" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="11 Days or Not" class="col-sm-2 control-label">Attending all 11 days ?</label>
+                    <div class="col-sm-6">
+                        <select name = "daysornot" id="11 Days or Not" required>
+                            <option></option>
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Gender" class="col-sm-2 control-label">Gender</label>
+                    <div class="col-sm-6">
+                        <select name = "gender" id="Gender" required>
+                            <option></option>
+                            <option>Female</option>
+                            <option>Male</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-6">
+                        <input type="email" name = "email" class="form-control" id="Email" placeholder="sboddupalli@gmail.com" required>
+                    </div>
+                    <div class="col-sm-4">
+                        Please enter the exact address where you would like to recevie all further communication. If this were to change please do intimate your lead immediately.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Phone Number" class="col-sm-2 control-label">Phone Number</label>
+                    <div class="col-sm-6">
+                        <input type="tel" name = "phonenumber" class="form-control" id="Phone Number" placeholder="Please enter it in the 1-408-702-2043 format" required>
+                    </div>
+                    <div class="col-sm-4">
+                        Please enter the exact phone number where you would like to recevie all further communication. If this were to change please do intimate your lead immediately.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Date Of Birth" class="col-sm-2 control-label">Date Of Birth</label>
+                    <div class="col-sm-6">
+                        <input type="text" name= "dateofbirth" class="form-control" id="Date Of Birth" placeholder="Please enter it in the MM/DD/YYYY format. E.g. 11/23/1926" required>
+                    </div>
+                    <div class="col-sm-4">
+                        Please note that your year of birth will be your password.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Chanting Experience" class="col-sm-2 control-label">Chanting Experience</label>
+                    <div class="col-sm-6">
+                        <select id="Chanting Experience" name = "chantingexperience" required>
+                            <option></option>
+                            <option>Less than 2 years</option>
+                            <option>2 - 5 years</option>
+                            <option>5 - 10 years</option>
+                            <option>10 - 20 years</option>
+                            <option>More than 20 years</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Spouse registered as Ritwik?" class="col-sm-2 control-label">Spouse registered as Ritwik?</label>
+                    <div class="col-sm-6">
+                        <select id="Spouse registered as Ritwik?" name="spouseregisteredasritwik">
+                            <option></option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Spouse Name" class="col-sm-2 control-label">Spouse Name</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="Spouse Name" name="spousename" placeholder="For e.g. Hyma Boddupalli">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Spouse acccompanying" class="col-sm-2 control-label">Is your spouse acccompanying you ?</label>
+                    <div class="col-sm-6">
+                        <select id="Spouse acccompanying" name = "spouseacccompanying">
+                            <option></option>
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Spouse Age" class="col-sm-2 control-label">Spouse Age</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" id="Spouse Age" placeholder="For e.g. 35" name="spouseage">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Spouse Gender" class="col-sm-2 control-label">Spouse Gender</label>
+                    <div class="col-sm-6">
+                        <select id="Spouse Gender" name="spousegender">
+                            <option></option>
+                            <option>Female</option>
+                            <option>Male</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Arrival" class="col-sm-2 control-label">Date of Arrival <br/>(On or Before April 29th)</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="intendeddateofarrivalmustbeonorbeforeapril29th" class="form-control" id="Arrival" placeholder="Please enter it in the M/DD/YYYY format. E.g. 11/23/1926" required>
+                    </div>
+                    <div class="col-sm-4">
+                        Please note all Ritwiks have to be present at the SRIM center by <strong class="alert-danger">April 29th, 2014</strong> end of day. Diksha will be given to the ritwiks on the 30th Morning and their prescence is mandatory.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="departure" class="col-sm-2 control-label">Date of Departure <br/>(May 11 evening or later)</label>
+                    <div class="col-sm-6">
+                        <input type="text" name = "intendeddateofdeparturemustbelatemay11eveorlater" class="form-control" id="departure" placeholder="Please enter it in the MM/DD/YYYY format. E.g. 11/23/1926" required>
+                    </div>
+                    <div class="col-sm-4">
+                        Please note all Ritwiks have to be present at the SRIM center until the <strong class="alert-danger">Evening of May 11th, 2014</strong> and expected to vacate within a couple of days.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Mahanyasam" class="col-sm-2 control-label">Can Chant Mahanyasam</label>
+                    <div class="col-sm-6">
+                        <select id = "Mahanyasam" name = "canchantmahanyasamyesno" id="Can chant Mahanyasam? Yes / No" required>
+                            <option></option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Medical / Dietery restrictions. If any." class="col-sm-2 control-label">Medical / Dietery Restrictions</label>
+                    <div class="col-sm-6">
+                        <textarea name="medicaldieteryrestrictions.ifany." id="Medical / Dietery restrictions. If any." class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend>Other Adults Accompanying You</legend>
+                    <div class="form-group">
+                        <label for="Total Other Adults Coming" class="col-sm-2 control-label">Total Other Adults Coming</label>
+                        <div class="col-sm-6">
+                            <input type="number" name = "totalotheradultscoming" class="form-control" id="Total Other Adults Coming" placeholder="For e.g. 1" required>
+                        </div>
+                        <div class="col-sm-4">
+                            Please do not include your spouse or yourself in this count. This would be any additional members such as children, parents, siblings or other friends.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 1 Name" class="col-sm-2 control-label">Other Adult 1 Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" name = "otheradult1name" class="form-control" id="Other Adult 1 Name" placeholder="Sekhar Boddupalli">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 1 age" class="col-sm-2 control-label">Other Adult 1 age</label>
+                        <div class="col-sm-6">
+                            <input type="number" name = "otheradult1age" class="form-control" id="Other Adult 1 age" placeholder="For e.g. 65">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 1 Gender" class="col-sm-2 control-label">Other Adult 1 Gender</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" name = "otheradult1gender" id="Other Adult 1 Gender">
+                                <option></option>
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 2 Name" class="col-sm-2 control-label">Other Adult 2 Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="otheradult2name" id="Other Adult 2 Name" placeholder="Sekhar Boddupalli">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 2 age" class="col-sm-2 control-label">Other Adult 2 age</label>
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control" name="otheradult2age" id="Other Adult 2 age" placeholder="For e.g. 65">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 2 Gender" class="col-sm-2 control-label">Other Adult 2 Gender</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="Other Adult 2 Gender" name="otheradult2gender">
+                                <option></option>
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 3 Name" class="col-sm-2 control-label">Other Adult 3 Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="otheradult3name" id="Other Adult 3 Name" placeholder="Sekhar Boddupalli">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 3 age" class="col-sm-2 control-label">Other Adult 3 age</label>
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control" name="otheradult3age" id="Other Adult 3 age" placeholder="For e.g. 65">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 3 Gender" class="col-sm-2 control-label">Other Adult 3 Gender</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="Other Adult 3 Gender" name="otheradult3gender">
+                                <option></option>
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 4 Name" class="col-sm-2 control-label">Other Adult 4 Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="otheradult4name" id="Other Adult 4 Name" placeholder="Sekhar Boddupalli">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 4 age" class="col-sm-2 control-label">Other Adult 4 age</label>
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control" name="otheradult4age" id="Other Adult 4 age" placeholder="For e.g. 65">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 4 Gender" class="col-sm-2 control-label">Other Adult 4 Gender</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="Other Adult 4 Gender" name="otheradult4gender">
+                                <option></option>
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 5 Name" class="col-sm-2 control-label">Other Adult 5 Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="otheradult5name" id="Other Adult 5 Name" placeholder="Sekhar Boddupalli">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 5 age" class="col-sm-2 control-label">Other Adult 5 age</label>
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control" name="otheradult5age" id="Other Adult 5 age" placeholder="For e.g. 65">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Other Adult 5 Gender" class="col-sm-2 control-label">Other Adult 5 Gender</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="Other Adult 5 Gender" name="otheradult5gender">
+                                <option></option>
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Children Accompanying You</legend>
+                    <div class="form-group">
+                        <label for="No of Children attending" class="col-sm-2 control-label">No of Children attending</label>
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control" id="No of Children attending" placeholder="For e.g. 1" name="noofchildrenattending">
+                        </div>
+                        <div class="col-sm-4">
+                            Please DO include all children attending, including yours in this section.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Children 1 Name" class="col-sm-2 control-label">Name of the First Child</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Children 1 Name" name="children1name" placeholder="Sai Boddupalli">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Child 1 Age" class="col-sm-2 control-label">Child 1 Age</label>
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control" id="Child 1 Age" placeholder="For e.g. 15" name="child1age">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Child 1 Gender" class="col-sm-2 control-label">Child 1 Gender</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="Child 1 Gender" name="child1gender">
+                                <option></option>
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Child 2 Name" class="col-sm-2 control-label">Child 2 Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Child 2 Name" placeholder="Sekhar Boddupalli" name="child2name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Child 2 Age" class="col-sm-2 control-label">Child 2 Age</label>
+                        <div class="col-sm-6">
+                            <input type="number" class="form-control" id="Child 2 Age" placeholder="For e.g. 65" name="child2age">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Child 2 Gender" class="col-sm-2 control-label">Child 2 Gender</label>
+                        <div class="col-sm-6">
+                            <select class="form-control" id="Child 2 Gender" name="child2gender">
+                                <option></option>
+                                <option>Female</option>
+                                <option>Male</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Travel</legend>
+                    <div class="form-group">
+                        <label for="shuttletransportationneededyesorno" class="col-sm-2 control-label">Do you need
+                            airport shuttle transportation ?</label>
+
+                        <div class="col-sm-6">
+                            <select name="shuttletransportationneededyesorno" id="shuttletransportationneededyesorno"
+                                    required>
+                                <option></option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            Please note that shuttles will operate between the hotels where the ritwiks are housed and the SRIM center.
+                            This is only to see if you need a ride from the aiport to the hotel.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="arrivingbyairorground" class="col-sm-2 control-label">Arriving by Air or Ground
+                            ?</label>
+
+                        <div class="col-sm-6">
+                            <select name="arrivingbyairorground" id="arrivingbyairorground" required>
+                                <option></option>
+                                <option>Air</option>
+                                <option>Ground</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="drivinginyourownvehicleyesorno" class="col-sm-2 control-label">Will you be driving
+                            your own vehicle
+                            ?</label>
+
+                        <div class="col-sm-6">
+                            <select name="drivinginyourownvehicleyesorno" id="drivinginyourownvehicleyesorno" required>
+                                <option></option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            This is incase you are local to Atlanta or if you are driving in or if you plan to rent a
+                            car.
+                            There is parking available at the SRIM Center and the hotels where you will be staying.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrivaltime" class="col-sm-2 control-label">Arrival Time</label>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="arrivaltime" id="arrivaltime" class="form-control"
+                                   placeholder="For e.g. 10:25 PM" required>
+                        </div>
+                        <div class="col-sm-4">
+                            A HH:MM AM/PM format will help. For e.g. 10:25 PM. Please do fill this in irrespective of
+                            your mode of transportation.
+                            If you are coming by flight please fill in the flight arrival time.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrivalairlinename" class="col-sm-2 control-label">Arrival Airline Name</label>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="arrivalairlinename" id="arrivalairlinename" class="form-control"
+                                   placeholder="Southwest">
+                        </div>
+                        <div class="col-sm-4">
+                            Please ignore this if you are arrving by ground.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrivalairlineflightnumber" class="col-sm-2 control-label">Arrival Airline Flight
+                            Number</label>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="arrivalairlineflightnumber" id="arrivalairlineflightnumber"
+                                   class="form-control" placeholder="SW8421">
+                        </div>
+                        <div class="col-sm-4">
+                            Please ignore this if you are arrving by ground.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="departuretime" class="col-sm-2 control-label">Departure Time</label>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="departuretime" id="departuretime" class="form-control"
+                                   placeholder="10:00 AM" required>
+                        </div>
+                        <div class="col-sm-4">
+                            Please note all of you are requested to depart on Monday, May/12/2014. Please do let us know
+                            the estimated time of departure.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="departureairlinename" class="col-sm-2 control-label">Departure Airline Name</label>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="departureairlinename" id="departureairlinename"
+                                   class="form-control" placeholder="Southwest">
+                        </div>
+                        <div class="col-sm-4">
+                            Please ignore this if you are arrving by ground.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="departureairlineflightnumber" class="col-sm-2 control-label">Departure Airline
+                            Flight Number</label>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="departureairlineflightnumber" id="departureairlineflightnumber"
+                                   class="form-control" placeholder="SW9421">
+                        </div>
+                        <div class="col-sm-4">
+                            Please ignore this if you are arrving by ground.
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Accommodation</legend>
+                    <div class="form-group">
+                        <label for="preferredroompartner" class="col-sm-2 control-label">Preferred Room Partner</label>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="preferredroompartner" id="preferredroompartner"
+                                   class="form-control" placeholder="Swami">
+                        </div>
+                        <div class="col-sm-4">
+                            All ritwiks will be paired for accommodation. If you have a preference for a room partner,
+                            please do mention their name here.
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>&nbsp;</legend>
+                </fieldset>
+                <div class="form-group">
+                    <label for="Notes/Questions/Issues" class="col-sm-2 control-label">Notes / Questions / Issues</label>
+                    <div class="col-sm-6">
+                        <textarea id="Notes/Questions/Issues" class="form-control" rows="5" name="notesquestionsissues"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane" id="payment" style="display:none">
+            <div class="alert alert-warning">If you have made any changes to the registration please do save them first.
+                If you have already paid, please do give us a couple of days before this is reflected in your account.
+                Please note these selections are final, if you would like these to be changed after the initial payment is made please contact your lead.
+            </div>
+            <table id = "accommodation_options" class="table table-striped table-bordered">
+                <thead>
+                    <th>Name</th>
+                    <th>Accommodation Option</th>
+                    <th>Age</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="panel panel-default" style="margin-top: 5em">
+                <div class="panel-body">
+                    <div style="text-align: center">
+                        <button class="btn btn-lg btn-primary" name="accommodationPaymentButton"
+                                id="accommodationPaymentButton">Pay Now (via PayPal)
+                        </button>
+                    </div>
+                </div>
+                <h3 style="text-align: center">OR</h3>
+
+                <ol class="list-group">
+                    <li class="list-group-item">Make a <span class="label label-info" style="font-size: 100%">Cashier's Cheque</span> to <span class="label label-info" style="font-size: 100%">SRIM Center</span></li>
+                    <li class="list-group-item">In the memo please do write clearly the persons you are paying for and the selected accommodations.</li>
+                    <li class="list-group-item">Mail the cashier's cheque to <span class="label label-info" style="font-size: 100%">Raghuram Kanadam, 167 Acalanes Dr, APT 1, Sunnyvale, CA, 94086</span></li>
+                </ol>
+            </div>
+            <form id="accommodationPaypalForm" action="https://www.paypal.com/us/cgi-bin/webscr" method="post" style="display: none;" target = "_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="atirudramahayajna.owner@gmail.com">
+                <input type="hidden" name="item_name" value="Payment for accommodation.">
+                <input type="hidden" name="page_style" value="PayPal">
+                <input type="hidden" name="no_shipping" value="1">
+                <input type="hidden" name="return" value="http://atirudram.us">
+                <input type="hidden" name="cancel_return" value="http://atirudram.us">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="amount" value="0">
+                <input type="hidden" name="tax" value="0">
+                <input type="hidden" name="lc" value="US">
+                <input type="hidden" name="bn" value="PP-DonationsBF">
+            </form>
+        </div>
+
+        <div class="tab-pane" id="accommodation_assignment">
+			<form class="form-horizontal" role="form" method="PUT" id="ritwikForm" style="padding-top: 10px">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Hotel Name</label>
+                    <label class="col-sm-3 control-label" id = "hotelName"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Hotel Address</label>
+                    <label class="col-sm-3 control-label" id = "hotelAddress"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Hotel Phone Number</label>
+                    <label class="col-sm-3 control-label" id = "hotelPhoneNumber"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Hotel Room Rate</label>
+                    <label class="col-sm-3 control-label" id = "hotelRoomRate"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Yajna Kunda (Sacrificial Altar) Name</label>
+                    <label class="col-sm-3 control-label" id = "homaKundaName"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Yajna Kunda (Sacrificial Altar) Number</label>
+                    <label class="col-sm-3 control-label" id = "homaKundaNumber"></label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Seating Number / Spot</label>
+                    <label class="col-sm-3 control-label" id = "homaKundaSpot"></label>
+                </div>
+			</form>
+		</div>
+    </div>
+
