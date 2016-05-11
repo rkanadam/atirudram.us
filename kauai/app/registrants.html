@@ -1,0 +1,388 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="utf-8">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<meta name="description" content="">-->
+    <!--<meta name="author" content="">-->
+
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"-->
+          <!--type="text/css"/>-->
+    <!--<script src="https://code.jquery.com/jquery-2.2.3.min.js"-->
+            <!--integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>-->
+    <!--<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+    <!--<script type="text/javascript"-->
+            <!--src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>-->
+
+    <!--<link rel="stylesheet"-->
+          <!--href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">-->
+    <!--<script type="text/javascript"-->
+            <!--src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>-->
+    <!--<link rel="stylesheet" href="css/index.css">-->
+    <!--<script src="js/index.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash; Modal &ndash;&gt;-->
+<!--<div class="modal fade" id="indicator" tabindex="-1" role="dialog">-->
+    <!--<div class="modal-dialog" role="document">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-body">-->
+                <!--<div class="progress progress-striped active" style="height: 50px;margin-bottom: 0px">-->
+                    <!--<div class="progress-bar progress-bar-info" style="width: 100%">-->
+                        <!--<h4>Contacting the server for information ...</h4>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<div class="container-fluid content">-->
+
+    <h1>Accommodation and Logistics</h1>
+    <hr>
+    <p>
+        Please use this form to provide us information about your travel, arrival and departure dates
+    </p>
+
+    <form style="padding-top: 15px;">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-1">
+                <div class="form-group">
+                    <label for="location">Where will you be staying ?</label>
+                    <input type="text" class="form-control" name="location" id="location"
+                           placeholder="Hotel / Vacation Rental Address">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="location">When will you arrive ?</label>
+
+                    <div class="input-group date" id="arrival">
+                        <input type="text" name="arrival" class="form-control">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="location">When will you depart ?</label>
+
+                    <div class="input-group" id = "departure">
+                        <input type="text" name="departure" class="form-control">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>Members of your group arriving and departing with you</h3>
+            <hr/>
+        </div>
+        <div class="row hidden-xs hidden-sm">
+            <div class="col-sm-1">
+                <label>&nbsp;</label>
+            </div>
+            <div class="col-sm-3">
+                <label>First Name</label>
+            </div>
+            <div class="col-sm-3">
+                <label>Last Name</label>
+            </div>
+            <div class="col-sm-2">
+                <label>Gender</label>
+            </div>
+            <div class="col-sm-2">
+                <label>Adult / Child</label>
+            </div>
+        </div>
+        <div class="row familyMember">
+            <div class="col-sm-1 text-center">
+                <label class=" text-primary text-lg">#1.</label>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="firstName" class="form-control" placeholder="First Name">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="lastName" class="form-control" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control" name="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control" name="adultorchild">
+                        <option value="child">Child</option>
+                        <option value="adult">Adult</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row familyMember">
+            <div class="col-sm-1 text-center">
+                <label class=" text-primary text-lg">#2.</label>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="firstName" class="form-control" placeholder="First Name">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="lastName" class="form-control" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control" name="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control" name="adultorchild">
+                        <option value="child">Child</option>
+                        <option value="adult">Adult</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row familyMember">
+            <div class="col-sm-1 text-center">
+                <label class=" text-primary text-lg">#3.</label>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="firstName" class="form-control" placeholder="First Name">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="lastName" class="form-control" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control" name="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control" name="adultorchild">
+                        <option value="child">Child</option>
+                        <option value="adult">Adult</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row familyMember">
+            <div class="col-sm-1 text-center">
+                <label class=" text-primary text-lg">#4.</label>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="firstName" class="form-control" placeholder="First Name">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="lastName" class="form-control" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control" name="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control" name="adultorchild">
+                        <option value="child">Child</option>
+                        <option value="adult">Adult</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row familyMember">
+            <div class="col-sm-1 text-center">
+                <label class=" text-primary text-lg">#5.</label>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="firstName" class="form-control" placeholder="First Name">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <input type="text" name="lastName" class="form-control" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control" name="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <select class="form-control" name="adultorchild">
+                        <option value="child">Child</option>
+                        <option value="adult">Adult</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--<div class="row familyMember">-->
+            <!--<div class="col-sm-1 text-center">-->
+                <!--<label class=" text-primary text-lg">#6.</label>-->
+            <!--</div>-->
+            <!--<div class="col-sm-3">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" name="firstName" class="form-control" placeholder="First Name">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-3">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" name="lastName" class="form-control" placeholder="Last Name">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-2">-->
+                <!--<div class="form-group">-->
+                    <!--<select class="form-control" name="gender">-->
+                        <!--<option value="female">Female</option>-->
+                        <!--<option value="male">Male</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-2">-->
+                <!--<div class="form-group">-->
+                    <!--<select class="form-control" name="adultorchild">-->
+                        <!--<option value="child">Child</option>-->
+                        <!--<option value="adult">Adult</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row familyMember">-->
+            <!--<div class="col-sm-1 text-center">-->
+                <!--<label class=" text-primary text-lg">#7.</label>-->
+            <!--</div>-->
+            <!--<div class="col-sm-3">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" name="firstName" class="form-control" placeholder="First Name">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-3">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" name="lastName" class="form-control" placeholder="Last Name">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-2">-->
+                <!--<div class="form-group">-->
+                    <!--<select class="form-control" name="gender">-->
+                        <!--<option value="female">Female</option>-->
+                        <!--<option value="male">Male</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-2">-->
+                <!--<div class="form-group">-->
+                    <!--<select class="form-control" name="adultorchild">-->
+                        <!--<option value="child">Child</option>-->
+                        <!--<option value="adult">Adult</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row familyMember">-->
+            <!--<div class="col-sm-1 text-center">-->
+                <!--<label class=" text-primary text-lg">#8.</label>-->
+            <!--</div>-->
+            <!--<div class="col-sm-3">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" name="firstName" class="form-control" placeholder="First Name">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-3">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" name="lastName" class="form-control" placeholder="Last Name">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-2">-->
+                <!--<div class="form-group">-->
+                    <!--<select class="form-control" name="gender">-->
+                        <!--<option value="female">Female</option>-->
+                        <!--<option value="male">Male</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-2">-->
+                <!--<div class="form-group">-->
+                    <!--<select class="form-control" name="adultorchild">-->
+                        <!--<option value="child">Child</option>-->
+                        <!--<option value="adult">Adult</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row familyMember">-->
+            <!--<div class="col-sm-1 text-center">-->
+                <!--<label class=" text-primary text-lg">#9.</label>-->
+            <!--</div>-->
+            <!--<div class="col-sm-3">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" name="firstName" class="form-control" placeholder="First Name">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-3">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" name="lastName" class="form-control" placeholder="Last Name">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-2">-->
+                <!--<div class="form-group">-->
+                    <!--<select class="form-control" name="gender">-->
+                        <!--<option value="female">Female</option>-->
+                        <!--<option value="male">Male</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-sm-2">-->
+                <!--<div class="form-group">-->
+                    <!--<select class="form-control" name="adultorchild">-->
+                        <!--<option value="child">Child</option>-->
+                        <!--<option value="adult">Adult</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </form>
+<!--</div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

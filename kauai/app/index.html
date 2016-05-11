@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+          type="text/css"/>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"
+            integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+
+    <link rel="stylesheet" href = "http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
+    <script type="text/javascript"
+            src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal fade" id="indicator" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="progress progress-striped active" style="height: 50px;margin-bottom: 0px">
+                    <div class="progress-bar progress-bar-info" style="width: 100%">
+                        <h4>Contacting the server for information ...</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid content">
+    <div class="row">
+        <div class="col-sm-4">&nbsp;</div>
+        <div class="col-sm-4">
+            <div class="jumbotron">
+                <form method="post" action="" id="loginForm">
+                    <h2>Sign in</h2>
+                    <input type="email" class="form-control has-success"
+                           placeholder="Email address used for registration"
+                           name="email" required autofocus>
+                    <input type="password" class="form-control" placeholder="Phone number used at registration"
+                           name="password" required>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                    <div class="alert alert-info">If you have trouble or any questions please do contact Chandar
+                        Krishnan
+                        (gchandar@gmail.com).
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
