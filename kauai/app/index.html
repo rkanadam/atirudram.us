@@ -43,15 +43,16 @@
 
 <div class="container-fluid content">
     <div class="row">
-        <div class="col-sm-4">&nbsp;</div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">&nbsp;</div>
+        <div class="col-sm-6">
             <div class="jumbotron">
                 <form method="post" action="" id="loginForm">
+                    <h3>Kauai Sahasra Lingarchana 2016</h3>
                     <h2>Sign in</h2>
                     <input type="email" class="form-control has-success"
                            placeholder="Email address used for registration"
                            name="email" required autofocus>
-                    <input type="password" class="form-control" placeholder="Phone number used at registration"
+                    <input type="password" class="form-control" maxlength="10" placeholder="Phone number used at registration, 10 digits no spaces or dashes"
                            name="password" required>
                     <input type="hidden" name="action" value="login">
                     <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
