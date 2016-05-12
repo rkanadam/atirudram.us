@@ -15,10 +15,13 @@
     <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
 
-    <link rel="stylesheet" href = "http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet"
+          href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
     <script type="text/javascript"
             src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
     <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
@@ -50,6 +53,7 @@
                            name="email" required autofocus>
                     <input type="password" class="form-control" placeholder="Phone number used at registration"
                            name="password" required>
+                    <input type="hidden" name="action" value="login">
                     <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
                     <div class="alert alert-info">If you have trouble or any questions please do contact Chandar
                         Krishnan
