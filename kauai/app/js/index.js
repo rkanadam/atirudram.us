@@ -44,7 +44,7 @@
                             }
                         });
 
-                        var commonProperties = ["address"];
+                        var commonProperties = ["address", "doyouhavearentalcar"];
                         _.each(commonProperties, function (commonProperty) {
                             var values = _.where(records, function (r) {
                                 return r[commonProperty];
