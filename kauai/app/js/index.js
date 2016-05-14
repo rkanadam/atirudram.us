@@ -29,7 +29,7 @@
                 } else {
                     $.get("registrants.html", "", function (html) {
                         $(".content").html(html);
-                        $("#arrival, #departure").datetimepicker().click(function () {
+                        $("[name=arrival], [name=departure]").closest(".input-group").datetimepicker().click(function () {
                             $(this).data("DateTimePicker").show();
                         });
 
@@ -44,7 +44,7 @@
                             }
                         });
 
-                        var commonProperties = ["arrival", "departure", "address"];
+                        var commonProperties = ["address"];
                         _.each(commonProperties, function (commonProperty) {
                             var values = _.where(records, function (r) {
                                 return r[commonProperty];

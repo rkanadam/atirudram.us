@@ -49,35 +49,15 @@
 
 <form style="padding-top: 15px;" id="accommodationForm">
 <div class="row">
-    <div class="col-sm-6 col-sm-offset-1">
+    <div class="col-sm-3">
         <div class="form-group">
             <label for="address">Where will you be staying ?</label>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <div class="form-group">
             <input type="text" class="form-control" name="address" id="address"
                    placeholder="Hotel / Vacation Rental Address">
-        </div>
-    </div>
-    <div class="col-sm-2">
-        <div class="form-group">
-            <label for="arrival">When will you arrive ?</label>
-
-            <div class="input-group date" id="arrival">
-                <input type="text" name="arrival" class="form-control">
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-2">
-        <div class="form-group">
-            <label for="departure">When will you depart ?</label>
-
-            <div class="input-group" id="departure">
-                <input type="text" name="departure" class="form-control">
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-            </div>
         </div>
     </div>
 </div>
@@ -86,37 +66,43 @@
     <hr/>
 </div>
 <div class="row hidden-xs hidden-sm">
-    <div class="col-sm-1">
-        <label>&nbsp;</label>
-    </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <label>First Name</label>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <label>Last Name</label>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <label>Gender</label>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <label>Adult / Child</label>
     </div>
+    <div class="col-sm-2">
+        <label>Arrival Time</label>
+    </div>
+    <div class="col-sm-1">
+        <label>Arrival Airline</label>
+    </div>
+    <div class="col-sm-2">
+        <label>Departure Time</label>
+    </div>
+    <div class="col-sm-1">
+        <label>Departure Airline</label>
+    </div>
 </div>
 <div class="row familyMember">
-    <div class="col-sm-1 text-center">
-        <label class=" text-primary text-lg">#1.</label>
-    </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <div class="form-group">
             <input type="text" name="firstname" class="form-control" placeholder="First Name">
         </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <div class="form-group">
             <input type="text" name="lastname" class="form-control" placeholder="Last Name">
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <div class="form-group">
             <select class="form-control" name="gender">
                 <option>Female</option>
@@ -124,7 +110,7 @@
             </select>
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <div class="form-group">
             <select class="form-control" name="adultorchild">
                 <option value="child">Child</option>
@@ -132,22 +118,49 @@
             </select>
         </div>
     </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="arrival" class="form-control" placeholder="">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <input type="text" name="arrivalairline" class="form-control" placeholder="">
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="departure" class="form-control" placeholder="">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <input type="text" name="departureairline" class="form-control" placeholder="">
+        </div>
+    </div>
 </div>
 <div class="row familyMember">
-    <div class="col-sm-1 text-center">
-        <label class=" text-primary text-lg">#2.</label>
-    </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <div class="form-group">
             <input type="text" name="firstname" class="form-control" placeholder="First Name">
         </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <div class="form-group">
             <input type="text" name="lastname" class="form-control" placeholder="Last Name">
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <div class="form-group">
             <select class="form-control" name="gender">
                 <option>Female</option>
@@ -155,7 +168,7 @@
             </select>
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <div class="form-group">
             <select class="form-control" name="adultorchild">
                 <option value="child">Child</option>
@@ -163,22 +176,49 @@
             </select>
         </div>
     </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="arrival" class="form-control" placeholder="">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <input type="text" name="arrivalairline" class="form-control" placeholder="">
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="departure" class="form-control" placeholder="">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <input type="text" name="departureairline" class="form-control" placeholder="">
+        </div>
+    </div>
 </div>
 <div class="row familyMember">
-    <div class="col-sm-1 text-center">
-        <label class=" text-primary text-lg">#3.</label>
-    </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <div class="form-group">
             <input type="text" name="firstname" class="form-control" placeholder="First Name">
         </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <div class="form-group">
             <input type="text" name="lastname" class="form-control" placeholder="Last Name">
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <div class="form-group">
             <select class="form-control" name="gender">
                 <option>Female</option>
@@ -186,7 +226,7 @@
             </select>
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <div class="form-group">
             <select class="form-control" name="adultorchild">
                 <option value="child">Child</option>
@@ -194,22 +234,49 @@
             </select>
         </div>
     </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="arrival" class="form-control" placeholder="">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <input type="text" name="arrivalairline" class="form-control" placeholder="">
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="departure" class="form-control" placeholder="">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <input type="text" name="departureairline" class="form-control" placeholder="">
+        </div>
+    </div>
 </div>
 <div class="row familyMember">
-    <div class="col-sm-1 text-center">
-        <label class=" text-primary text-lg">#4.</label>
-    </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <div class="form-group">
             <input type="text" name="firstname" class="form-control" placeholder="First Name">
         </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <div class="form-group">
             <input type="text" name="lastname" class="form-control" placeholder="Last Name">
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <div class="form-group">
             <select class="form-control" name="gender">
                 <option>Female</option>
@@ -217,7 +284,7 @@
             </select>
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <div class="form-group">
             <select class="form-control" name="adultorchild">
                 <option value="child">Child</option>
@@ -225,22 +292,49 @@
             </select>
         </div>
     </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="arrival" class="form-control" placeholder="">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <input type="text" name="arrivalairline" class="form-control" placeholder="">
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="departure" class="form-control" placeholder="">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <input type="text" name="departureairline" class="form-control" placeholder="">
+        </div>
+    </div>
 </div>
 <div class="row familyMember">
-    <div class="col-sm-1 text-center">
-        <label class=" text-primary text-lg">#5.</label>
-    </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <div class="form-group">
             <input type="text" name="firstname" class="form-control" placeholder="First Name">
         </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
         <div class="form-group">
             <input type="text" name="lastname" class="form-control" placeholder="Last Name">
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <div class="form-group">
             <select class="form-control" name="gender">
                 <option>Female</option>
@@ -248,12 +342,42 @@
             </select>
         </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-1">
         <div class="form-group">
             <select class="form-control" name="adultorchild">
                 <option value="child">Child</option>
                 <option value="adult">Adult</option>
             </select>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="arrival" class="form-control" placeholder="">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <input type="text" name="arrivalairline" class="form-control" placeholder="">
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="departure" class="form-control" placeholder="">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <input type="text" name="departureairline" class="form-control" placeholder="">
         </div>
     </div>
 </div>
@@ -382,9 +506,9 @@
 <!--</div>-->
 <!--</div>-->
 <div class="row">
-    <div class="col-sm-10 col-sm-offset-1">
+    <div class="col-sm-2 col-sm-offset-4">
         <div class="form-group">
-            <input type="submit" value="Register" class="form-control">
+            <input type="submit" value="Register" class="form-control btn-primary">
         </div>
     </div>
 </div>
