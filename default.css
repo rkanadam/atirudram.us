@@ -266,6 +266,7 @@ ul.contact li a.icon-rss:before { background: #F2600B; }
     height: 120px;
     width: 180px;
     background:url('images/swami.png') no-repeat;
+    background-size: cover;
 }
 
 .shirdi_swami {
@@ -275,6 +276,7 @@ ul.contact li a.icon-rss:before { background: #F2600B; }
     height: 120px;
     width: 180px;
     background:url('images/shirdi_swami.png') no-repeat;
+    background-size: cover;
 }
 
 
